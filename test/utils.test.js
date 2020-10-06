@@ -2,7 +2,8 @@ import {
     renderGame,
     renderRow,
     findById,
-    calcSubtotal
+    calcSubtotal,
+    calcOrderTotal
 } from '../apps/utils.js'
 
 

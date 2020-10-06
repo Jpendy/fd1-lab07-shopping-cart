@@ -64,7 +64,7 @@ export function renderRow(cartItem) {
 
 
     row.append(titleElem, priceElem, quantityElem, subtotalElem);
-    return row
+    return row;
 }
 
 
@@ -87,4 +87,10 @@ export function findById(someArray, someId) {
 // Calculate subtotal function
 export function calcSubtotal(price, quantity) {
     return price.toFixed(2) * quantity;
+}
+
+
+// Calculate Order Total
+export function calcOrderTotal() {
+
 }
