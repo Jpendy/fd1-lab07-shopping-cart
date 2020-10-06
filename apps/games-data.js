@@ -1,5 +1,4 @@
 export const gamesArray = [
-
     {
         id: 'csgo',
         name: 'Counter-Strike: Global Offensive',
@@ -10,7 +9,6 @@ export const gamesArray = [
         price: 15.00,
         onSale: false,
     },
-
     {
         id: 'among-us',
         name: 'Among Us',
@@ -21,7 +19,6 @@ export const gamesArray = [
         price: 5.00,
         onSale: false,
     },
-
     {
         id: 'for-the-king',
         name: 'For the King',
@@ -32,7 +29,6 @@ export const gamesArray = [
         price: 20.00,
         onSale: false,
     },
-
     {
         id: 'l4d2',
         name: 'Left 4 Dead 2',
@@ -43,7 +39,6 @@ export const gamesArray = [
         price: 10.00,
         onSale: false,
     },
-
     {
         id: 'stardew-valley',
         name: 'Stardew Valley',

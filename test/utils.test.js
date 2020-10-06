@@ -37,7 +37,7 @@ test('renderRow should return a table row element with the appropriate contents 
         quantity: 5
     }
 
-    const expected = "<tr><td>Counter-Strike: Global Offensive</td><td>$15.00</td><td>5</td><td>$75.00</td></tr>";
+    const expected = '<tr><td>Counter-Strike: Global Offensive</td><td>$15.00</td><td>5</td><td class="subtotal">$75.00</td></tr>';
 
     const actual = renderRow(cartItem).outerHTML;
 
@@ -91,6 +91,17 @@ test('calcSubtotal should return $100.00 when passed 25.00 and 4', (expect) => {
 
     const expected = 100.00;
     const actual = calcSubtotal(price, quantity);
+
+    expect.equal(actual, expected);
+})
+
+
+// calcOrderTotal test
+test('calcOrderTotal should return 165.00 when passed [25.00, 30.00, 50.00, 60.00', (expect) => {
+    const mySubtotals = [25.00, 30.00, 50.00, 60.00];
+
+    const expected = 165.00;
+    const actual = calcOrderTotal(mySubtotals);
 
     expect.equal(actual, expected);
 })

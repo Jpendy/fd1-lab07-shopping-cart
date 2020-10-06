@@ -18,3 +18,16 @@ ol, ul {
 .game > img {
     width: 100px;
 }
+
+ul {
+    display: flex;
+    flex-direction: row;
+
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

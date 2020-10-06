@@ -9,6 +9,7 @@ main {
 
 th {
     text-align: left;
+    background-color: white;
 }
 
 table {
@@ -21,4 +22,8 @@ table * {
 
 table td:nth-child(even){
     border: solid 1px black
+}
+
+table tr:nth-child(even) {
+    background-color: lightgray;
 }

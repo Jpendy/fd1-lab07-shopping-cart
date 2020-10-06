@@ -1,4 +1,3 @@
-import { cart } from './cart.js';
 import {
     gamesArray,
 } from './games-data.js'
@@ -62,6 +61,8 @@ export function renderRow(cartItem) {
     priceElem.textContent = `$${matchingProduct.price.toFixed(2)}`;
     subtotalElem.textContent = `$${calcSubtotal(quantity, price).toFixed(2)}`;
 
+    subtotalElem.classList.add('subtotal');
+
 
     row.append(titleElem, priceElem, quantityElem, subtotalElem);
     return row;
@@ -70,7 +71,6 @@ export function renderRow(cartItem) {
 
 // Find element by ID
 export function findById(someArray, someId) {
-
     for (let i = 0; i< someArray.length; i++) {
 
         const arrayElem = someArray[i];
@@ -79,7 +79,6 @@ export function findById(someArray, someId) {
             return arrayElem;
         }
     }
-
     return null;
 };
 
@@ -91,6 +90,12 @@ export function calcSubtotal(price, quantity) {
 
 
 // Calculate Order Total
-export function calcOrderTotal() {
+export function calcOrderTotal(subtotalArray) {
+    let total = 0;
 
+    for (const subtotal of subtotalArray) {
+        total += subtotal;
+    };
+
+    return total;
 }
