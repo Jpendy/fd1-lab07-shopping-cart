@@ -1,3 +1,7 @@
+import {
+    gamesArray,
+} from './games-data.js'
+
 // renderGame Function. Creates a list element from a game object.
 export function renderGame(game) {
     let li = document.createElement('li');
@@ -59,3 +63,9 @@ export function findById(someArray, someId) {
 
     return null;
 };
+
+
+// Calculate subtotal function
+export function calcSubtotal(price, quantity) {
+    return price.toFixed(2) * quantity;
+}

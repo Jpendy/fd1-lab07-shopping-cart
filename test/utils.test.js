@@ -1,7 +1,8 @@
 import {
     renderGame,
-    renderGame,
-    findById,, renderRow
+    renderRow,
+    findById,
+    calcSubtotal
 } from '../apps/utils.js'
 
 
@@ -88,3 +89,15 @@ test('findByID should take in an id and an array and return the matching item', 
     assert.equal(actual1, expected1);
     assert.equal(actual2, expected2);
 });
+
+
+// calcSubtotal test
+test('calcSubtotal should return $100.00 when passed 25.00 and 4', (expect) => {
+    const price = 25.00;
+    const quantity = 4;
+
+    const expected = 100.00;
+    const actual = calcSubtotal(price, quantity);
+
+    expect.equal(actual, expected);
+})
