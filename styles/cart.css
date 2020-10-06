@@ -1,0 +1,24 @@
+main {
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+th {
+    text-align: left;
+}
+
+table {
+    border: solid 1px black;
+}
+
+table * {
+    padding: 5px;
+}
+
+table td:nth-child(even){
+    border: solid 1px black
+}

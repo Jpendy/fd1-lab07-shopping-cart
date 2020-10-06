@@ -1,3 +1,4 @@
+// renderGame Function. Creates a list element from a game object.
 export function renderGame(game) {
     let li = document.createElement('li');
     li.classList.add('game');
@@ -35,4 +36,10 @@ export function renderGame(game) {
     li.appendChild(addButton);
 
     return li;
+}
+
+
+// renderRow function. Creates a tr element with title, quantity, price, and subtotal
+export function renderRow(cartItem) {
+    
 }
