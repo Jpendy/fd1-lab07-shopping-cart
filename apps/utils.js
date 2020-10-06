@@ -1,3 +1,4 @@
+import { cart } from './cart.js';
 import {
     gamesArray,
 } from './games-data.js'
@@ -45,7 +46,25 @@ export function renderGame(game) {
 
 // renderRow function. Creates a tr element with title, quantity, price, and subtotal
 export function renderRow(cartItem) {
+    const matchingProduct = findById(gamesArray, cartItem.id);
+    const price = matchingProduct.price;
+    const quantity = cartItem.quantity;
 
+    const row = document.createElement('tr');
+
+    const titleElem = document.createElement('td');
+    const quantityElem = document.createElement('td');
+    const priceElem = document.createElement('td');
+    const subtotalElem = document.createElement('td');
+
+    titleElem.textContent = matchingProduct.name;
+    quantityElem.textContent = cartItem.quantity;
+    priceElem.textContent = `$${matchingProduct.price.toFixed(2)}`;
+    subtotalElem.textContent = `$${calcSubtotal(quantity, price).toFixed(2)}`;
+
+
+    row.append(titleElem, priceElem, quantityElem, subtotalElem);
+    return row
 }
 
 
