@@ -41,5 +41,21 @@ export function renderGame(game) {
 
 // renderRow function. Creates a tr element with title, quantity, price, and subtotal
 export function renderRow(cartItem) {
-    
+
 }
+
+
+// Find element by ID
+export function findById(someArray, someId) {
+
+    for (let i = 0; i< someArray.length; i++) {
+
+        const arrayElem = someArray[i];
+        
+        if (arrayElem.id === someId) {
+            return arrayElem;
+        }
+    }
+
+    return null;
+};
