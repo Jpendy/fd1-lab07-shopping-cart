@@ -9,7 +9,6 @@ import {
 
 const test = QUnit.test;
 
-
 // renderGame Test
 test('renderGame should return a list element with the appropriate contents when passed a game object', (expect) => {
     const game = {
